@@ -9,9 +9,9 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 markdown_text = '''
-### Dash and Markdown
+### Bio-electric Impedance Spectroscopy 
 
-Dash apps can be written in Markdown.
+A 3D visulalization of body compostion in female sprague dawley rats.
 Dash uses the [CommonMark](http://commonmark.org/)
 specification of Markdown.
 Check out their [60 Second Markdown Tutorial](http://commonmark.org/help/)
