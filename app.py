@@ -9,13 +9,21 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 markdown_text = '''
-### Bio-electric Impedance Spectroscopy 
+### Bio-electric Impedance Spectroscopy
+*Andrew Allison*  
+  
+  
+__  
+'''
 
-A 3D visulalization of body compostion in female sprague dawley rats.
-Dash uses the [CommonMark](http://commonmark.org/)
-specification of Markdown.
-Check out their [60 Second Markdown Tutorial](http://commonmark.org/help/)
-if this is your first introduction to Markdown!
+markdown_graph1 = '''
+__*Change in Body Composition: 3D Comparison of Impedance Among Rats*__
+Resistance vs Capacitive Reactance vs Inter-rat Weight
+'''
+
+markdown_graph2 = '''
+__*Total Body Water (Y) Resistance (X) and Frequency (Z) 3D Impedance Nyquist*__
+Resistance vs Capacitive Reactance vs Frequency
 '''
 
 server = app.server
@@ -26,6 +34,8 @@ df = pd.read_csv(
     '8e0768211f6b747c0db42a9ce9a0937dafcbd8b2/'
     'indicators.csv')
 
+print(df)
+
 available_indicators = df['Indicator Name'].unique()
 
 app.layout = html.Div([
@@ -34,6 +44,7 @@ app.layout = html.Div([
             dcc.Markdown(children=markdown_text)
         ]),
         html.Div([
+            dcc.Markdown(children=markdown_graph1),
             dcc.Dropdown(
                 id='crossfilter-xaxis-column',
                 options=[{'label': i, 'value': i} for i in available_indicators],
@@ -49,6 +60,7 @@ app.layout = html.Div([
         style={'width': '49%', 'display': 'inline-block'}),
 
         html.Div([
+            dcc.Markdown(children=markdown_graph2),
             dcc.Dropdown(
                 id='crossfilter-yaxis-column',
                 options=[{'label': i, 'value': i} for i in available_indicators],
@@ -101,9 +113,10 @@ def update_graph(xaxis_column_name, yaxis_column_name,
     dff = df[df['Year'] == year_value]
 
     return {
-        'data': [go.Scatter(
+        'data': [go.Scatter3d(
             x=dff[dff['Indicator Name'] == xaxis_column_name]['Value'],
             y=dff[dff['Indicator Name'] == yaxis_column_name]['Value'],
+            z=dff[dff['Indicator Name'] == yaxis_column_name]['Value'],
             text=dff[dff['Indicator Name'] == yaxis_column_name]['Country Name'],
             customdata=dff[dff['Indicator Name'] == yaxis_column_name]['Country Name'],
             mode='markers',
