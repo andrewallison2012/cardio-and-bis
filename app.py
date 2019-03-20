@@ -8,6 +8,16 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
+markdown_text = '''
+### Dash and Markdown
+
+Dash apps can be written in Markdown.
+Dash uses the [CommonMark](http://commonmark.org/)
+specification of Markdown.
+Check out their [60 Second Markdown Tutorial](http://commonmark.org/help/)
+if this is your first introduction to Markdown!
+'''
+
 server = app.server
 
 df = pd.read_csv(
@@ -20,7 +30,9 @@ available_indicators = df['Indicator Name'].unique()
 
 app.layout = html.Div([
     html.Div([
-
+        html.Div([
+            dcc.Markdown(children=markdown_text)
+        ]),
         html.Div([
             dcc.Dropdown(
                 id='crossfilter-xaxis-column',
