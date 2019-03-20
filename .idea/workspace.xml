@@ -14,10 +14,10 @@
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="live-pycharm">
             <state>
-              <first_editor relative-caret-position="45">
+              <first_editor relative-caret-position="-1898">
                 <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
               </first_editor>
-              <second_editor />
+              <second_editor relative-caret-position="-105" />
             </state>
           </provider>
         </entry>
@@ -129,19 +129,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1295" y="-951" width="1905" height="1054" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5015528" side_tool="true" weight="0.15351583" />
       <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4984472" visible="true" weight="0.15512614" />
       <window_info id="Structure" order="2" sideWeight="0.5013193" side_tool="true" weight="0.15351583" />
       <window_info anchor="bottom" id="Pylint" order="0" sideWeight="0.49919486" weight="0.32919255" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.496511" visible="true" weight="0.32016632" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49597424" visible="true" weight="0.32016632" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.503489" side_tool="true" visible="true" weight="0.32016632" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="3" sideWeight="0.50402576" side_tool="true" visible="true" weight="0.32016632" />
       <window_info anchor="bottom" id="Python Console" order="4" sideWeight="0.49758455" weight="0.32848233" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.49597424" visible="true" weight="0.33056134" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49597424" weight="0.33056134" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -185,10 +184,10 @@
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="live-pycharm">
         <state>
-          <first_editor relative-caret-position="45">
+          <first_editor relative-caret-position="-1898">
             <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           </first_editor>
-          <second_editor />
+          <second_editor relative-caret-position="-105" />
         </state>
       </provider>
     </entry>
